@@ -5,18 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{propertyAddress}}</title>  
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PTSerif">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/zoomify/2.2.0/zoomify.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/zoomify/2.2.0/zoomify.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -36,39 +34,38 @@
       color: white;
     }
     h4 {
-      font-size: 1.5vw;
+      font-size: 1vw;
       padding-left: 2vw;
       color: black;
+      text-transform: uppercase;
     }
-    /* #openHouseModal p {
-      font-size: 1vw;
-      text-align: center;
-    } */
     .title-textt {
       font-size: 55px;
       padding: 0;
       margin: 0;
     }
     .title-text {
-      font-size: 2.8vw;
+      font-size: 2vw;
       margin: 0;
-      font-family: "PTSerif";
+      font-family: "Oswald";
       text-align: center;
+      text-transform: uppercase;
     }
     .feature-text {
       font-size: 1.5vw;
-      font-family: "PTSerif";
+      font-family: "Oswald";
     }
     .address-text {
       font-size: 2.5vw;
       padding: 0;
     }
     .centerTitle {
-      font-size: 2.5vw;
-      font-family: "PTSerif";
+      font-size: 2vw;
+      font-family: "Oswald";
       padding: 0;
       margin-bottom: 3vw;
       text-align: center;
+      text-transform: uppercase;
     }
     .med-text {
       font-size: 1.8vw;
@@ -78,25 +75,31 @@
       font-size: .8vw;
       margin-top:-20px;
       color: #6e6e6e;
-      font-family: "Poppins";
+      font-family: "Montserrat";
       text-align: center;
+    }
+    .galleryText {
+      font-size: 1.2vw;
+      margin-bottom: 3vw;
+      text-align: center;
+      text-transform: uppercase;
     }
     .text {
       font-size: .8vw;
       color: black;
-      font-family: "Poppins";
+      font-family: "Montserrat";
       margin: 0;
     }
     .footertext {
-      font-size: 1vw;
-      margin: 2vw 10vw;
-      padding-bottom: 5vw;
-      font-family: "Poppins";
+      font-size: .8vw;
+      margin: 1vw 10vw;
+      padding-bottom: 4vw;
+      font-family: "Montserrat";
     }
     .text-center {
       font-size: 1vw;
       color: black;
-      font-family: "Poppins";
+      font-family: "Montserrat";
       text-align: center;
       margin: 0;
     }
@@ -115,7 +118,7 @@
       text-decoration: none;
     } 
     body {
-      font-family: "PTSerif";
+      font-family: "Oswald";
       margin: 0;
       padding: 0;
     }
@@ -138,7 +141,8 @@
       color: white;
       font-size: 3vw;
       font-weight: bold;
-      font-family: "PTSerif";
+      font-family: "Oswald";
+      text-transform: uppercase;
       z-index: 999;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       margin: 2% 2% 0 10%;
@@ -148,7 +152,7 @@
       flex-wrap: wrap;
       justify-content: flex-end;
       align-items: center;
-      font-family: "Poppins";
+      font-family: "Fira Sans";
       padding-right: 8%;
     }
     #menu a {
@@ -157,48 +161,6 @@
       padding: 0 .6vw;
       font-size: 1vw;
       z-index: 999;
-    }
-    #scroll-button {
-      position: absolute;
-      bottom: 5%;
-      right: 11%;
-      background-color: rgba(112, 110, 110, 0.477);
-      border: 1px solid white;
-      border-radius: 50%;
-      cursor: pointer;
-      opacity: 0.9;
-      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
-      z-index: 2;
-      height: 5vw;
-      width: 5vw;
-      overflow: hidden;
-    }
-    #scroll-button i {
-      font-size: 1.5vw;
-      color: white;
-    }
-    #scroll-button span {
-      display: inline-block;
-      animation: scrollIcon 3s linear infinite; 
-    }
-    @keyframes scrollIcon {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(100%); }
-    }
-    #scroll-button:hover {
-      opacity: 1;
-      transform: scale(1.1);  
-      border: 1px solid white;
-    }
-    #address {
-      position: absolute;
-      display: none;
-      bottom: 50px;
-      left: 240px;
-      color: white;
-      font-size: 32px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
     }
     .slideshow {
       max-width: 100%;
@@ -234,47 +196,45 @@
     .slideshow img.active {
       opacity: 1;
     }
-    #details {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      text-align: center;
-      background-color: #F7F7F7;
-      padding: 2vw 0;
-    }
     .price {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      padding: 0 15px;
+      background-color: #FFFFFF;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      padding: .6vw 5vw;
+      font-size: 2vw;
+    }
+    #details {
+      text-align: center;
+      padding: 2vw 0;
+      border-bottom: 1px solid #ccc;
     }
     #details-menu {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
+      justify-content: space-evenly;
     }
     .detail-item {
-      flex-direction: column;
-      flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 0 1vw;
+      margin-right: 1vw;
     }
-    .material-icons {
+    .detail-item .material-icons {
       font-size: 2vw;
     }
     #description {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 2% 5%;
     }
     .propertyAddress {
       font-size: 3vw;
       margin-bottom: 5vw;
+      font-family: "Oswald";
+      text-transform: uppercase;
     }
     #propertyDescription {
       display: flex;
@@ -297,71 +257,43 @@
     }
     .description {
       width: 50%;
-      font-family: "Poppins";
+      font-family: "Montserrat";
       line-height: 1.5;
       font-size: 1vw;
       letter-spacing: 2px;
       padding: 2%;
     }
+    .photoGrid {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      box-shadow: 8px 18px 30px -10px rgba(0,0,0,0.25);
+    }
+    .gridItem {
+      display: flex;
+      flex-direction: row;
+    }
     .modalImages {
-      width: 40vw;
-      border-right: 2vw solid #feeca4f2;
-      border-bottom: 2vw solid #feeca4f2;
+      width: 30vw;
     }
-    .side-modalImages {
-      width: 40vw;
-      border-right: 2vw solid #feeca4f2;
-      border-bottom: 2vw solid #feeca4f2;
+    .modalImagesBottom{
+      width: 15vw;
+      flex-direction: row;
     }
+    .modalImages:hover{
+      background: rgba(0,0,0,0.12);
+      transform: translateX(0%) scale(1.010);
+    }
+    .modalImagesBottom:hover{
+      background-color: rgba(0,0,0,0.12);
+      transform: translateX(0%) scale(1.010);
+    }
+  
     .topPhoto,
     .bottomPhoto{
       margin: 20px;
-      justify-content: flex-end;
-    }
-    .circle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 2.5%;
-      width: 40vw;
-    }
-    .desc-void {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 20vw;
-      height: 20vw;
-      background: #fff;
-      text-align: center;
-      border-radius: 50%;
-      font-size: 3vw;
-      z-index: 2;
-      border: 2px solid black;
-    }
-    .open-house-label {
-      display: flex;
-      flex-direction: column;
-    }
-    .open-house-preview {
-      font-size: 1vw;
-      background: #000;
-      color: #fff;
-      padding: 3px 10px;
-    }
-    .view-details-cta {
-      font-size: 1vw;
-      margin-top: 15px;
-      text-decoration: none;
     }
     #features {
-      /* display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      flex-grow: unset; */
-      /* background-color: #F7F7F7; */
-      /* padding: 2vw 12vw; */
       width: 40vw;
       height: 60vh;
     }
@@ -369,8 +301,9 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      font-size: 2.5vw;
-      font-family: "PTSerif";
+      font-size: 2vw;
+      font-family: "Oswald";
+      text-transform: uppercase;
     }
     #feature-list {
       display: flex;
@@ -384,13 +317,11 @@
       margin-right: 1vw; 
       margin-bottom: 2vw;
       padding: .5vw .5vw;
-      /* border-radius: 2vw;  */
       font-size: 1vw;
-      font-family: "PTSerif";
+      font-family: "Montserrat";
       background-color: #f0f0f0; 
       color: #333; 
       text-decoration: none;
-      /* border: .1vw solid black; */
       transition: background-color 0.3s;
     }
     #feature-list :hover {
@@ -399,78 +330,35 @@
       transform: scaleX(1.02);
       transform-origin: center;
     }
-    #carousels {
-      height: 60vh;
+    .gallery {
+      display: flex;
+      margin: auto auto 2vw auto;
+      width: 60vw;
+      height: 100%;
+      box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.81);
+      -webkit-box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.81);
+      -moz-box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.81);
+    }
+    .galleryItem {
+      display: grid;
+      grid-template-columns: auto auto auto;
       margin: 0 auto;
-      overflow: hidden;
-      white-space: nowrap; 
     }
-    .carousel-row {
-        display: block; 
-        white-space: nowrap; 
+    .photo:hover{
+      background: rgba(0,0,0,0.12);
+      transform: translateX(0%) scale(1.010);
     }
-    .carousel-img {
-        display: inline-block; 
-        width: 22%;
-        height: 20vh;
-        margin-right: 18px;
-        margin-bottom: 18px;
+    .photo {
+      width: 20vw;
+      text-align: center;
     }
-    .carousel-container {
-      overflow: hidden;
-      padding: 0vw 0 2vw 0;
-    }
-      .carousels img {
-          flex: 0 0 auto;
-          width: 25vw;
-          height: 16vw;
-          margin-right: 1vw;
-      }
-      #first-carousel {
-          display: flex;
-          animation: scrollAnimation 60s linear infinite;
-          margin-bottom: 0.5cm;
-      }
-      #first-carousel:hover{
-          animation-play-state: paused;
-      }
-      #second-carousel {
-          display: flex;
-          animation: scrollAnimationOpposite 60s linear infinite;
-          margin-bottom: 0.5cm;
-      }
-      #second-carousel:hover{
-          animation-play-state: paused;
-      }
-      @keyframes scrollAnimation {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-        100.1% {
-          transform: translateX(-50%);
-        }
-      }
-      @keyframes scrollAnimationOpposite {
-        0% {
-            transform: translateX(-50%);
-        }
-        100% {
-            transform: translateX(0);
-        }
-        100.1% {
-            transform: translateX(-50%);
-        }
-      }  
     .propertyVideos {
       display: flex;
       flex-direction: column;
       top: 10px;
       justify-content: center;
       align-items: center;
-      background-color: #f0f0f0;
+      background-color: #F5F9FF;
       padding: 2vw;
     }
     .propertyMedia {
@@ -481,7 +369,8 @@
       display: flex;
       flex-direction: column;
       text-align: center;
-      font-size: 2.5vw;
+      text-transform: uppercase;
+      font-size: 2vw;
       margin: 1vw;
     }
     .floorPlanImage img {
@@ -512,40 +401,22 @@
     }
     .realtorDetails {
       display: flex;
-      /* flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%; */
     }
     .realtor {
       display: flex;
       flex-direction: row;
       align-items: center; 
-      /* width: 100%; */
       padding: 4vw;
     }
     .realtor-info {
-      /* display: flex; */
       margin: 1%;
       font-size: 2vw;
-      /* text-align: center; */
     }
-    /* .realtor-details {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      text-align: center;
-      width: 100vw;
-    } */
     .realtor-details p {
-      /* padding: 1.5%;
-      text-align: center; */
       margin: 0;
       padding-left: 2vw;
       font-size: .9vw;
-      font-family: "Poppins";
+      font-family: "Montserrat";
     }
     .realtor-img {
       width: 12vw; 
@@ -566,50 +437,23 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .parallax {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(180deg,rgba(0, 0, 0, 0.644) 20%,rgba(255,255,255,0) 100%);
-      background-image: url("{{images.image2}}");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      height: 100vh;
-      position: relative;
-    }
-    .parallax::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); 
-    }
-    .parallax-card {
-      padding: 20px;
-      border-radius: 10px;
-      position: relative; 
-      z-index: 1; 
-    }
     .contact-form-section {
-      max-width: 45vw;
       margin: 0 auto;
       padding: 5vw;
       text-align: center;
+      background-color: #f9f9f9;
     }
     .form-group {
+      max-width: 45vw;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
       flex-flow: column wrap;
-      margin: 5vw 0 3vw 0;
+      margin: 3vw auto 3vw auto;
     }
     .form-group input[type="text"] {
       border: none; 
-      border-bottom: .1vw solid #9E9F9F; 
+      border-bottom: .1vw solid black; 
       padding: 1vw; 
       margin-bottom: 1vw; 
       width: 35vw; 
@@ -621,7 +465,7 @@
       text-align: left;
       font-size: 1vw;
       color: #9E9F9F;
-      font-family: "Poppins";
+      font-family: "Montserrat";
       margin: 0;
     }
     .inquiryButton {
@@ -633,9 +477,8 @@
       padding: .5vw;
       text-align: center;
       margin: .5vw;
-      width: 100vw;
-      font-family: "Poppins";
-      font-size: 1.2vw;
+      width: 15vw;
+      font-size: 1vw;
       background-color: white;
       border: .1vw solid black;
     }
@@ -644,8 +487,7 @@
       color: white;
     }
     .footer {
-      background-color: #f0f0f0;
-      padding: 4vw 0 3vw 0;
+      padding: 2vw 0 1vw 0;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -745,53 +587,6 @@
       font-size: 2vw;
       width: 0;
     }
-    /* .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      top: 60%;
-      left: 50vw;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      overflow: auto;
-      transform: translate(-50%, -50%);
-      border-radius: 5px;
-    }
-    .modal-content {
-      display: flex;
-      align-items: center;
-      width: 25vw;
-      margin: 0 auto;
-      padding: 2vw;
-      text-align: center;
-      width: 30%;
-      max-height: 75%;
-      overflow-y: auto;
-    } */
-    /* .openHouseModalCard {
-      background-color: #F9F9F9;
-      padding: .5vw;
-      margin: 1vw;
-      width: 100%;
-    }
-    .close i {
-      position: absolute;
-      top: 1vw;
-      right: 2vw;
-      color: rgb(255, 242, 0);
-      font-size: 2vw;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-    } */
     .slideshowModal {
       display: none;
       position: fixed;
@@ -978,13 +773,9 @@
     }
     #share-buttons {
       position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
       cursor: pointer;
-      bottom: 50%; 
-      left: 0;
+      bottom: 25%; 
+      right: 0;
       transform: translateY(50%);
     }
     #share-buttons li {
@@ -997,10 +788,11 @@
     }
     #share-buttons li:hover {
       animation: transition ease-in-out 0.3s;  
-      transform: translateX(0%) scale(1.1); 
-      left: 0;
+      transform: translateX(0%) scale(1); 
+      right: 0;
       padding-left: .5vw;
       background-color: white;
+      margin: 0;
     }
 
 /* Ipad*/
@@ -1008,7 +800,7 @@
    .title-text {
       font-size: 6vw;
       padding: 0;
-      font-family: "PTSerif";
+      font-family: "Oswald";
     }
     .address-text {
       font-size: 4vw;
@@ -1044,10 +836,6 @@
       font-size: 5vw;
       color: black;
     }
-    /* #openHouseModal p {
-      font-size: 2vw;
-      text-align: center;
-    } */
     body {
       width: 100%;
       margin: 0;
@@ -1203,7 +991,7 @@
     }
     .feature-text {
       font-size: 3vw;
-      font-family: "PTSerif";
+      font-family: "Oswald";
     }
     #carousels {
       height: 40vh;
@@ -1449,32 +1237,6 @@
     .close i {
       font-size: 6vw;
     }
-    .modal {
-      display: none;
-      z-index: 1000;
-      top: 50%;
-      left: 50%;
-      text-align: center;
-      overflow: auto;
-      transform: translate(-50%, -50%);
-      border-radius: 5px;
-    }
-    .modal-content {
-      width: 65vw;
-      top: 18vw;
-      left: 18vw;
-      margin: 0;
-      padding: 5vw;
-    }
-    .openHouseModalCard {
-      background-color: #F9F9F9;
-      padding: 1vw;
-      margin: 1vw;
-      width: 60vw;
-    }
-    .modal-card {
-      font-size: 2vw;
-    }
     .custom-modal-content {
       width: 70vw;
       left: 16vw;
@@ -1516,7 +1278,7 @@
    .title-text {
       font-size: 10vw;
       padding: 0;
-      font-family: "PTSerif";
+      font-family: "Oswald";
     }
     .address-text {
       font-size: 5vw;
@@ -1555,10 +1317,6 @@
       font-size: 8vw;
       color: black;
     }
-    /* #openHouseModal p {
-      font-size: 4vw;
-      text-align: center;
-    } */
     body {
       width: 100%;
       margin: 0;
@@ -1695,7 +1453,7 @@
     #feature-title {
       font-size: 8vw;
       padding: 0;
-      font-family: "PTSerif";
+      font-family: "Oswald";
       text-align: center;
     }
     #feature-list {      
@@ -1723,7 +1481,7 @@
     }
     .feature-text {
       font-size: 4vw;
-      font-family: "PTSerif";
+      font-family: "Oswald";
     }
     #carousels {
       height: 40vh;
@@ -1965,29 +1723,6 @@
       left: 42vw;
       top: 80vw;
     }
-    .modal {
-      display: none;
-      z-index: 1000;
-      top: 50%;
-      left: 50%;
-      text-align: center;
-      overflow: auto;
-      transform: translate(-50%, -50%);
-      border-radius: 5px;
-    }
-    .modal-content {
-      width: 80vw;
-      top: 10%;
-      left: 8%;
-      margin: 0;
-      padding: 5vw;
-    }
-    .openHouseModalCard {
-      background-color: #F9F9F9;
-      padding: 2vw;
-      margin: 2vw;
-      width: 60vw;
-    }
     .custom-modal-content {
       width: 70vw;
       position: fixed;
@@ -2041,25 +1776,18 @@
         <img src="{{image}}" >
         {% endfor %}
       </div>
-      <div id="address">{{ propertyAddress }}</div>
-
-      <button id="scroll-button" onclick="scrollToDescription()"> 
-        <span><i class="material-icons">south</i></span>
-      </button>
+      <div class="price">
+        <p>${{ price }}</p>
+      </div>
     </div>
   </section>
   <section id="offered">
     <div id="details">
-      <div class="price">
-        <p class="text">Offered At</p>
-        <p class="title-text">${{ price }}</p>
-      </div>
       <div id="details-menu">
         {% for detail in details %}
           <div class="detail-item">
-            <i class="material-icons">{{ detail.icon }}</i>
-            <p class="med-text">{{ detail.text }}</p>
-            <p class="subtext">{{ detail.subtext }}</p>
+            <p class="med-text"><i class="material-icons">{{ detail.icon }}</i>
+              {{ detail.text }} {{ detail.subtext }}</p>
           </div>
         {% endfor %}
       </div>
@@ -2068,10 +1796,14 @@
   <section id="1">
     <div id="description">
       <div id="propertyDescription">
-        <!-- <div class="description">{{propertyDescription}}</div> -->
         <div class="topPhoto">
-          <img id="topPhoto" src="{{ images.image5 }}" class="side-modalImages">
-        
+         <div class="photoGrid">
+          <div class="gridItem"><img id="topPhoto" src="{{ images.image1 }}" class="modalImages"></div>
+          <div class="gridItem">          
+            <img id="topPhoto" src="{{ images.image4 }}" class="modalImagesBottom">
+            <img id="topPhoto" src="{{ images.image5 }}" class="modalImagesBottom">
+          </div>
+         </div>
          <div id="myModal" class="slideshowModal">
            <span class="closeSlideshow" onclick="closeTopPhotoModal()">&times;</span>
            <div class="slideshow-modal-content">
@@ -2087,84 +1819,63 @@
         </div>
         <div class="description">
           <div class="propertyAddress" >{{ propertyAddress }}</div>
-            {{propertyDescription}}
+            <p>{{propertyDescription}}</p>
           </div>
       </div>
       <div class="horizontal-line"></div>
-      <div id="propertyDescriptionBottom">
-        <div id="features">
-          <div id="feature-title">{{ featureTitle}}</div>
-          <div id="feature-list">
-            {% for feature in features %}
-              <a href="#" id="features{{ loop.index }}">{{ feature }}</a>
-            {% endfor %}
-          </div>
-        </div>
-        <div class="bottomPhoto">
-          <img id="bottomPhoto" src="{{ images.image8 }}" class="modalImages">
-      
-          <div id="myslideshowModals" class="slideshowModals">
-              <span class="slideshow-close-buttons" onclick="closeBottomPhotoModal()">&times;</span>
-              <div class="slideshowModal-contents">
-                <div class="my-slides">
-                  {% for bottomImage in images.values() %}
-                  <img src="{{ bottomImage }}" class="slideshowModal-images">
-                  {% endfor %}
-                </div>
-              </div>
-                <a class="prev-buttons" onclick="bottomSlides(-1)">&#10094;</a>
-                <a class="next-buttons" onclick="bottomSlides(1)">&#10095;</a>
-          </div>
-        </div>
-        <!-- <div class="circle">
-          <div class="desc-void">
-            <a id="openHouse" overlay-target="open-house">
-              <div class="open-house-label"><span>Open</span><span>House</span></div>
-              <div class="open-house-preview">
-                <span>{{openHouse.propertyViewing1.day}}, {{openHouse.propertyViewing1.date}}</span>
-                <span>@</span>
-                <span>{{openHouse.propertyViewing1.start_time}}</span>
-              </div>
-              <div class="view-details-cta"> + {{ openHouseCount - 1}} more </div>
-            </a>
-          </div>
-        </div> -->
       </div>
-      <div class="horizontal-line"></div>
   </section >
-  <!-- <section id="2">
-    <div id="features">
-      <div id="feature-title">{{ featureTitle}}</div>
-      <div id="feature-list">
-        {% for feature in features %}
-          <a href="#" id="features{{ loop.index }}">{{ feature }}</a>
-        {% endfor %}
+  <section id="2">
+    <div id="propertyDescriptionBottom">
+      <div id="features">
+        <div id="feature-title">{{ featureTitle}}</div>
+        <div id="feature-list">
+          {% for feature in features %}
+            <a href="#" id="features{{ loop.index }}">{{ feature }}</a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  </section>   -->
+      <div class="bottomPhoto">
+        <div class="photoGrid">
+          <div class="gridItem"><img id="bottomPhoto" src="{{ images.image6 }}" class="modalImages"></div>
+          <div class="gridItem">          
+            <img id="topPhoto" src="{{ images.image7 }}" class="modalImagesBottom">
+            <img id="topPhoto" src="{{ images.image8 }}" class="modalImagesBottom">
+          </div>
+         </div>      
+        <div id="myslideshowModals" class="slideshowModals">
+            <span class="slideshow-close-buttons" onclick="closeBottomPhotoModal()">&times;</span>
+            <div class="slideshowModal-contents">
+              <div class="my-slides">
+                {% for bottomImage in images.values() %}
+                <img src="{{ bottomImage }}" class="slideshowModal-images">
+                {% endfor %}
+              </div>
+            </div>
+              <a class="prev-buttons" onclick="bottomSlides(-1)">&#10094;</a>
+              <a class="next-buttons" onclick="bottomSlides(1)">&#10095;</a>
+        </div>
+      </div>
+    <div class="horizontal-line"></div>
+  </section>
   <section id ="3">
     <div id="customModal" class="custom-modal">
       <span class="custom-close">&times;</span>
       <img class="custom-modal-content" id="customModalImage">
     </div>
-    <div id="carousel">
-      <div class="carousel-container">
-        <div class="carousels" id="first-carousel">
+    <div class="centerTitle">Photos</div>
+      <div class="gallery">
+        <div class="galleryItem" id="">
           {% for image in images.values() %}
           <a href="#" class="custom-modal-trigger" data-image="{{ image }}">
-            <img src="{{ image }}" alt="Modal Trigger Image" class="custom-carousel-img">
+            <img src="{{ image }}" alt="Modal Trigger Image" class="photo">
           </a>
           {% endfor %}
         </div>
-        <div class="carousels" id="second-carousel">
-          {% for image in images.values() %}
-          <a href="#" class="custom-modal-trigger" data-image="{{ image }}">
-            <img src="{{ image }}" alt="Modal Trigger Image" class="custom-carousel-img">
-          </a>
-          {% endfor %}
+      </div> 
+        <div class="galleryText" id="topPhoto">
+          <p>View {{imageCount}}  Photos</p>
         </div>
-        </div> 
-    </div>
   </section>
   <section id="4">
     <div class="propertyVideos">
@@ -2232,7 +1943,6 @@
           <div class="realtorImg">
             <img src="{{ details.Image }}" alt="Modal Trigger Image" class="realtor-img">
           </div> 
-          <!-- <div class="realtor-info">{{ realtor }}</div> -->
           <div class="realtor-details">
             <h4>{{ realtor }}</h4>
             <p>{{ details.Title }}</p><br>
@@ -2243,7 +1953,6 @@
             <p>{{ details['License #'] }}</p>
           </div>
         </div>
-        <!-- <div class="horizontal-line"></div> -->
         {% endfor %}
       </div>
     </div>
@@ -2253,22 +1962,13 @@
       <iframe src="{{ googleMapAddress }}" width="1000" height="500" style="border:0;" allowfullscreen="" loading="async" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
-  <section>
-    <div class="parallax">
-      <div class="parallax-card">
-        <h1>{{ propertyAddress }} <h1>
-        <h3>{{ extendedAddress }}</h3>
-      </div>
-    </div>
-  </section>
   <section id = "8">
     <div class="contact-form-section">
       <div class="title-text">{{ inquiry.inquiryTitle }}</div>
       <form id="contactForm" action="#" method="post">
         <div class="form-group">
           {% for field, label in inquiry.inquiryDetails.items() %}
-            <label for="{{ field }}">{{ label }} *</label>
-            <input type="text" id="{{ field }}" name="{{ field }}" required>
+            <input type="text" id="{{ field }}" name="{{ field }}" placeholder="{{ label }}*" autocomplete="off">
           {% endfor %}
         </div>
         <div class="inquiryButton">
@@ -2280,9 +1980,7 @@
   <section id="9">
     <div class="footer">
       <img src={{revaLogo}} class="revaLogo">
-      <!-- <div class="footerDetails" > -->
         <div class="footertext">{{footerDetails.copyright}}. {{ footerDetails.footerDescription}}</div>
-      <!-- </div>  -->
     </div>
   </section>
     <footer>                                                                                                                                                                  
@@ -2316,26 +2014,20 @@
     {% endfor %}
   </div>
 
-  <!-- <div id="openHouseModal" class="modal">
-    <div class="modal-content">
-      <h2 class="title-text">Open House</h2>
-      {% for key, viewing in openHouse.items() %}
-      <div class="openHouseModalCard">
-        <h2>{{ viewing.day }} - {{ viewing.date }}</h2>
-        <p>{{ viewing.brokerInfo }}</p>
-        <p>{{ viewing.start_time }} to {{ viewing.end_time }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  <div id="overlay" class="overlay"><span class="close"><i class="material-icons">cancel</i></span></div> -->
-
-
 <script>
-  // TOP PHOTO SLIDESHOW
-  document.getElementById('topPhoto').addEventListener('click', function() {
-    const topPhotoModal = document.getElementById('myModal');
-    topPhotoModal.style.display = 'block';
+  document.addEventListener('DOMContentLoaded', function() {
+    const topPhotos = document.querySelectorAll('[id^="topPhoto"]');
+    
+    topPhotos.forEach(function(topPhoto) {
+        topPhoto.addEventListener('click', function() {
+            const topPhotoModal = document.getElementById('myModal');
+            if (topPhotoModal) {
+                topPhotoModal.style.display = 'block';
+            } else {
+                console.log("Modal element not found");
+            }
+        });
+    });
   });
 
   function closeTopPhotoModal() {
@@ -2364,41 +2056,8 @@
     }
     slideTop[topSlideIndex - 1].style.display = "block";
   }
-
-  //BOTTOM PHOTO SLIDESHOW
-  document.getElementById('bottomPhoto').addEventListener('click', function() {
-    const bottomPhotoModal = document.getElementById('myslideshowModals');
-    bottomPhotoModal.style.display = 'block';
-  });
-
-  function closeBottomPhotoModal() {
-    const bottomPhotoModal = document.getElementById('myslideshowModals');
-    bottomPhotoModal.style.display = 'none';
-  }
-
-  var bottomSlideIndex = 1;
-  showBottomSlide(bottomSlideIndex);
-
-  function bottomSlides(n) {
-    showBottomSlide(bottomSlideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showBottomSlide(bottomSlideIndex = n);
-  }
-
-  function showBottomSlide(n) {
-    var i;
-    var slideBottom = document.getElementsByClassName("my-slides")[0].getElementsByTagName("img");
-    if (n > slideBottom.length) { bottomSlideIndex = 1; }
-    if (n < 1) { bottomSlideIndex = slideBottom.length; }
-    for (i = 0; i < slideBottom.length; i++) {
-      slideBottom[i].style.display = "none";
-    }
-    slideBottom[bottomSlideIndex - 1].style.display = "block";
-  }
-
-  //CAROUSEL SLIDESHOW
+  
+  //PHOTO GALLERY SLIDESHOW
   var customModal = document.getElementById('customModal');
   var customModalImg = document.getElementById('customModalImage');
   var customModalIndex = 0;
@@ -2482,16 +2141,6 @@
       showImage(currentIndex);
   }, 9000);
 
-
-
-  document.addEventListener("DOMContentLoaded", function() {  
-  var zoomImages = document.querySelectorAll('.zoomify');
-  zoomImages.forEach(function (image) {
-    var zoomInstance = new Zoomify(image);
-      zoomInstance.zoomOut();
-    }, 1000);
-  });
-
   function scrollToDescription() {
     const descriptionSection = document.getElementById('description');
     if (descriptionSection) {
@@ -2563,36 +2212,6 @@
     });
   });
 
-
-  var openHouseModal = document.getElementById('openHouseModal');
-  var overlay = document.getElementById('overlay');
-  var openHouseBtn = document.getElementById("openHouse");
-  var closeBtns = document.querySelectorAll(".close");
-
-  function closeAllModals() {
-    openHouseModal.style.display = "none";
-    overlay.style.display = "none";
-  }
-
-  openHouseBtn.onclick = function() {   
-    openHouseModal.style.display = "block";
-    overlay.style.display = "block";
-  }
-
-  window.onclick = function(event) {
-    console.log(event.target);
-    if (
-        event.target == openHouseModal 
-    ) {
-        closeAllModals();
-    }
-  }
-  closeBtns.forEach(function(btn) {
-    btn.addEventListener("click", function() {
-      closeAllModals();
-    });
-  });
-
   document.addEventListener("DOMContentLoaded", function() {
     function isValidEmail(email) {
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -2632,8 +2251,6 @@
   const message = encodeURIComponent('Hey, I found this property');
   const title = encodeURIComponent(document.querySelector('title').textContent);
 
-  console.log([link, message, title]);
-
   const fb = document.querySelector('.facebook');
   fb.href = `https://www.facebook.com/share.php?u=${link}`;
 
@@ -2652,7 +2269,6 @@
   
   const reddit = document.querySelector('.reddit');
   reddit.href = `https://www.reddit.com/submit?url=${link}&title=${title}`;
-
 
 
   </script>
