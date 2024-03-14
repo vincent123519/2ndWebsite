@@ -30,6 +30,7 @@ def generate_html(config_file, template_file, output_file):
 
     rendered_html = template.render(
         propertyAddress=home_data.get('propertyAddress', ''),
+        propertyAdd=home_data.get('propertyAdd', ''),
         images=home_data.get('images', {}),
         title=home_data.get('title', ''),
         menu=home_data.get('menu', []),
