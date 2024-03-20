@@ -103,11 +103,22 @@
       text-align: center;
       margin: 0;
     }
-    .horizontal-line {
-      width: 100%; 
+    .text-right {
+      font-size: 1vw;
+      color: black;
+      font-family: "Montserrat";
+      text-align: right;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .horizontal-lines {
+      position: relative;
+      left: 10%;
+      width: 80%; 
       height: 1px; 
+      margin: 2vw 0;
       background-color: #aeacac;
-      margin: 2vw 0 2vw 0;
     }
     .prev:hover, .next:hover, .prev-buttons:hover, .next-buttons:hover, .custom-prev:hover, .custom-next:hover{
       color: white;
@@ -125,7 +136,10 @@
     #home {
       position: relative;
       overflow: hidden;
-      height: 100vh; 
+      height: 50vw; 
+    }
+    #homeVideoPlayer {
+      width: 100%;
     }
     .navbar {
       display: flex;
@@ -134,32 +148,70 @@
       align-items: center;
       grid-gap: 50px;
       padding: 0;
-      z-index: 99;
-      background: linear-gradient(180deg,rgba(0, 0, 0, 0.435) 20%,rgba(255, 255, 255, 0.086) 100%);
+      height: 50px;
     }
     .title {
-      color: white;
-      font-size: 3vw;
-      font-weight: bold;
-      font-family: "Oswald";
-      text-transform: uppercase;
+      color: black;
+      font-size: 18px;
+      position: relative;
+      left: 90px;
+    }
+    .address-bot {
+      font-size: 45px;
       z-index: 999;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      margin: 2% 2% 0 10%;
+      font: europa,"Open Sans",sans-serif !important;
+      font-weight: 700;
+      white-space: nowrap;
+      /* margin: 1% 1% 0 10%; */
+      position: absolute;
+      color: white;
+      left: 12vh;
+      top: 815px;
+    }
+    .address-bot2 {
+      font-size: 20px;
+      z-index: 999;
+      font: europa,"Open Sans",sans-serif !important;
+      font-weight: 700;
+      white-space: nowrap;
+      position: absolute;
+      color: white;
+      left: 12vh;
+      top: 870px;
+    }
+    .requests {
+      color: black;
+      font-size: 18px;
+      z-index: 999;
+      font: europa,"Open Sans",sans-serif !important;
+      font-weight: 700;
+      white-space: nowrap;
+      margin: 0 5% 0 10%;
+      position: absolute;
+      right: 0;
+      top: 12px;
+    }
+    .tv {
+      border-right: 18px solid white;
+      border-left: 19px solid white;
+    }
+    .homevideo {
+      position: absolute;
+      width: 100%;
+      margin: auto;
     }
     #menu {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      align-items: center;
-      font-family: "Fira Sans";
-      padding-right: 8%;
+      font-family: "Raleway","Open Sans",Helvetica,Arial,sans-serif;
+      color: black;
+      position: relative;
+      font-size: 18px;
     }
     #menu a {
-      color: white;
+      color: black;
+      font-family: "Raleway","Open Sans",Helvetica,Arial,sans-serif;
       text-decoration: none;
-      padding: 0 .6vw;
-      font-size: 1vw;
+      padding: 0 .4vw;
+      font-size: 16px;
       z-index: 999;
     }
     .slideshow {
@@ -180,7 +232,6 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100vh;
       opacity: 0;
       transition: opacity 1s ease-in-out;
       animation: zoominout 10s infinite alternate;
@@ -197,23 +248,25 @@
       opacity: 1;
     }
     .price {
-      background-color: #FFFFFF;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 2;
-      padding: .6vw 5vw;
-      font-size: 2vw;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    padding: 0.6vw 5vw;
+    font-size: 2vw;
+    border: 1px solid white;
     }
     #details {
       text-align: center;
-      padding: 2vw 0;
+      margin: 2vw 0;
       border-bottom: 1px solid #ccc;
+      /* border: 2px solid blue; */
     }
     #details-menu {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
+      margin: 2vw;
     }
     .detail-item {
       display: flex;
@@ -242,8 +295,9 @@
       align-items: center;
       flex-direction: row;
       justify-content: space-evenly;
-      width: 100%;
+      /* width: 100%; */
       grid-gap: 20px;
+      margin: 0 4vw;
     }
     #propertyDescriptionBottom {
       display: flex;
@@ -251,9 +305,9 @@
       align-items: center;
       flex-direction: row;
       justify-content: space-evenly;
-      width: 100%;
+      /* width: 100%; */
       grid-gap: 20px;
-      margin-bottom: 5vw;
+      margin: 0 4vw;
     }
     .description {
       width: 50%;
@@ -265,8 +319,6 @@
     }
     .photoGrid {
       display: grid;
-      width: 100%;
-      height: 100%;
       box-shadow: 8px 18px 30px -10px rgba(0,0,0,0.25);
     }
     .gridItem {
@@ -295,7 +347,7 @@
     }
     #features {
       width: 40vw;
-      height: 60vh;
+      /* height: 60vh; */
     }
     #feature-title {
       display: flex;
@@ -332,16 +384,16 @@
     }
     .gallery {
       display: flex;
-      margin: auto auto 2vw auto;
+      margin: 2vw auto;
       width: 60vw;
-      height: 100%;
+      /* height: 100%; */
       box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.81);
       -webkit-box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.81);
       -moz-box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.81);
     }
     .galleryItem {
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: auto auto auto auto;
       margin: 0 auto;
     }
     .photo:hover{
@@ -349,7 +401,7 @@
       transform: translateX(0%) scale(1.010);
     }
     .photo {
-      width: 20vw;
+      width: 15vw;
       text-align: center;
     }
     .propertyVideos {
@@ -358,20 +410,38 @@
       top: 10px;
       justify-content: center;
       align-items: center;
-      background-color: #F5F9FF;
-      padding: 2vw;
+      /* background-color: #F5F9FF; */
     }
     .propertyMedia {
       display: flex;
       flex-direction: column;
+    }
+    .showcase-tabs-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      /* background-color: #F5F9FF; */
+      font-size: 2vw;
+    }
+    .showcase-tabs-wrapper a {
+      text-decoration: none;
+      color: black;
+    }
+    .showcase-tabs-wrapper a:hover {
+      text-decoration: underline;
+    }
+    .showcase-tabs-wrapper a:active {
+      text-decoration: underline;
     }
     .propertyCategory {
       display: flex;
       flex-direction: column;
       text-align: center;
       text-transform: uppercase;
-      font-size: 2vw;
+      font-size: 1.8vw;
       margin: 1vw;
+      font-weight: 700;
     }
     .floorPlanImage img {
       display: flex;
@@ -393,20 +463,18 @@
     .propertyRealtor {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       justify-content: space-between;
       flex-direction: column;
-      margin-top: 50px;
-      margin: 2vw;
     }
     .realtorDetails {
       display: flex;
+      justify-content: space-evenly;
     }
     .realtor {
       display: flex;
       flex-direction: row;
       align-items: center; 
-      padding: 4vw;
+      margin-bottom: 5vw;
     }
     .realtor-info {
       margin: 1%;
@@ -430,8 +498,8 @@
     .google-maps-section {
       text-align: center;
     }
-    iframe {
-      width: 100%;
+    .googleMap {
+      width: 65%;
       height: 60vh;
       border: 0;
       border-radius: 8px;
@@ -439,9 +507,13 @@
     }
     .contact-form-section {
       margin: 0 auto;
-      padding: 5vw;
+      padding: 1vw;
       text-align: center;
       background-color: #f9f9f9;
+    }
+
+    .contactForm {
+      margin: 3vw 0;
     }
     .form-group {
       max-width: 45vw;
@@ -783,7 +855,7 @@
       background-color: #333;
     }
     #share-buttons img {
-      width: 1.5vw;
+      width: 2vw;
       margin: .4vw;
     }
     #share-buttons li:hover {
@@ -796,7 +868,7 @@
     }
 
 /* Ipad*/
-@media only screen and (min-device-width: 451px) and (max-device-width: 1000px) {
+/* @media only screen and (min-device-width: 451px) and (max-device-width: 1000px) {
    .title-text {
       font-size: 6vw;
       padding: 0;
@@ -850,7 +922,6 @@
     }
     .slideshow img {
       width: 100%;
-      height: 100%;
     }
       @keyframes zoominout {
         0% {
@@ -1271,10 +1342,10 @@
       width: 3vw;
       margin: .4vw;
     }
-}
+} */
 
 /* Mobile Phones */
-@media only screen and (min-device-width: 220px) and (max-device-width: 450px) {
+/* @media only screen and (min-device-width: 220px) and (max-device-width: 450px) {
    .title-text {
       font-size: 10vw;
       padding: 0;
@@ -1331,7 +1402,6 @@
     }
     .slideshow img {
       width: 100%;
-      height: 100%;
     }
       @keyframes zoominout {
         0% {
@@ -1756,7 +1826,7 @@
       width: 6vw;
       margin: .4vw;
     }
-}
+} */
   </style>
 
 </head>
@@ -1765,20 +1835,29 @@
     <div id="home">
       <div class="navbar">
         <div  class="title">{{ propertyAddress }}</div>
+        <div class="address-bot">{{ propertyAddress }}</div>
+        <div class="address-bot2">{{ extendedAddress }}</div>
         <div id="menu">
           {% for item in menu %}
             <a href="#{{ loop.index }}" id="menu{{ loop.index }}">{{ item }}</a>
           {% endfor %}
         </div>
+        <div><a href="#8" class="requests">REQUEST INFO</a>
+        </div>
       </div>
-      <div class="slideshow">
-        {% for image in images.values() %}
-        <img src="{{image}}" >
-        {% endfor %}
+      <div class="tv">
+        <video controls autoplay loop muted id="homeVideoPlayer" data-video-url="{{ homeVideo }}">
+          <source src="{{ homeVideo }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
+      <div  id="address">{{ propertyAddress }}</div>
       <div class="price">
         <p>${{ price }}</p>
       </div>
+      <!-- <button id="scroll-button" onclick="scrollToDescription()">
+        <span><i class="material-icons">south</i></span>
+      </button> -->
     </div>
   </section>
   <section id="offered">
@@ -1822,7 +1901,7 @@
             <p>{{propertyDescription}}</p>
           </div>
       </div>
-      <div class="horizontal-line"></div>
+      <div class="horizontal-lines"></div>
       </div>
   </section >
   <section id="2">
@@ -1837,7 +1916,7 @@
       </div>
       <div class="bottomPhoto">
         <div class="photoGrid">
-          <div class="gridItem"><img id="bottomPhoto" src="{{ images.image6 }}" class="modalImages"></div>
+          <div class="gridItem"><img id="topPhoto" src="{{ images.image6 }}" class="modalImages"></div>
           <div class="gridItem">          
             <img id="topPhoto" src="{{ images.image7 }}" class="modalImagesBottom">
             <img id="topPhoto" src="{{ images.image8 }}" class="modalImagesBottom">
@@ -1856,7 +1935,9 @@
               <a class="next-buttons" onclick="bottomSlides(1)">&#10095;</a>
         </div>
       </div>
-    <div class="horizontal-line"></div>
+    </div>
+    <div class="horizontal-lines"></div>
+
   </section>
   <section id ="3">
     <div id="customModal" class="custom-modal">
@@ -1873,66 +1954,89 @@
           {% endfor %}
         </div>
       </div> 
-        <div class="galleryText" id="topPhoto">
-          <p>View {{imageCount}}  Photos</p>
-        </div>
+      <div class="galleryText" id="topPhoto">
+        <p>View {{imageCount}}  Photos</p>
+      </div>
+      <div class="horizontal-lines"></div>
   </section>
-  <section id="4">
-    <div class="propertyVideos">
-      <div class="propertyMedia">
-        {% for category, videos in videos.items() %}
-          <div class="propertyCategory">
-            {{ category }}
-            <div class="horizontal-line"></div>
-            <div class="videoPlayer">
-              {% for video_title,video_url in videos.items() %}
-              <video controls id="videoPlayer" data-video-url="{{ video_url }}">
-                <source src="{{ video_url }}" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              {% endfor %}
+  <section>
+    <div class="showcase-tabs-wrapper text-center">
+      <a href="#" tabindex="0" role="button" tab-data="showcase-videos" class="propertyCategory showcase-tab active">Video</a>
+      <a href="#" tabindex="0" role="button" tab-data="showcase-vtour" class="propertyCategory showcase-tab">3D Tour</a>
+      <a href="#" tabindex="0" role="button" tab-data="showcase-hotspot-floorplans" class="propertyCategory showcase-tab">Floor Plans</a>
+    </div>  
+    <div id="showcase-videos" class="showcase-content">
+        <section id="4">
+            <div class="propertyVideos">
+                <div class="propertyMedia">
+                    {% for category, videos in videos.items() %}
+                        <div class="propertyCategory">
+                            <div class="videoPlayer">
+                                {% for video_title,video_url in videos.items() %}
+                                    <video controls id="videoPlayer" data-video-url="{{ video_url }}">
+                                        <source src="{{ video_url }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-          </div>
-        {% endfor %}
+        </section>
+    </div>
+  
+    <div id="showcase-vtour" class="showcase-content" style="display: none;">
+        <section id="5">
+            <div class="propertyVideos">
+                <div class="propertyMedia">
+                    {% for category, tours in tours.items() %}
+                        <div class="propertyCategory">
+                            <div class="videoPlayer">
+                                {% for tour_title,video_url in tours.items() %}
+                                    <video controls id="videoPlayer" data-video-url="{{ video_url }}">
+                                        <source src="{{ video_url }}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div id="showcase-hotspot-floorplans" class="showcase-content" style="display: none;">
+        <section id="6">
+            <div class="propertyVideos">
+                <div class="propertyMedia">
+                    {% for category, plans in plans.items() %}
+                        <div class="propertyCategory">
+                            <div class="floorPlanImage">
+                                {% for plan_title,image_url in plans.items() %}
+                                    <img src="{{ image_url }}" alt="Floor Plan">
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="horizontal-lines"></div>
+  </section>
+  <section id="7" class="google-maps-section">
+    <div>
+      <div class="">
+        <div class="centerTitle">LOCATION</div>
+        <div class="centerTitle">{{propertyAddress}}, {{extendedAddress}}</div>
       </div>
     </div>
-  </section>
-  <section id="5">
-    <div class="propertyVideos">
-      <div class="propertyMedia">
-        {% for category, tours in tours.items() %}
-          <div class="propertyCategory">
-            {{ category }}
-            <div class="horizontal-line"></div>
-            <div class="videoPlayer">
-              {% for tour_title,video_url in tours.items() %}
-              <video controls id="videoPlayer" data-video-url="{{ video_url }}">
-                <source src="{{ video_url }}" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              {% endfor %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
+    <div class="">
+      <iframe  class="googleMap" src="{{ googleMapAddress }}" width="700" height="500" frameborder="0" allowfullscreen="" loading="async" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </section>
-  <section id="6">
-    <div class="propertyVideos">
-      <div class="propertyMedia">
-        {% for category, plans in plans.items() %}
-          <div class="propertyCategory">
-            {{ category }}
-            <div class="horizontal-line"></div>
-            <div class="floorPlanImage">
-              {% for plan_title,image_url in plans.items() %}
-                <img src="{{ image_url }}" alt="Floor Plan">
-              {% endfor %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
+    <div class="horizontal-lines"></div>
   </section>
   <section>
     <div class="propertyRealtor">
@@ -1957,24 +2061,21 @@
       </div>
     </div>
   </section>  
-  <section id="7" class="google-maps-section">
-    <div class="">
-      <iframe src="{{ googleMapAddress }}" width="1000" height="500" style="border:0;" allowfullscreen="" loading="async" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
   <section id = "8">
     <div class="contact-form-section">
-      <div class="title-text">{{ inquiry.inquiryTitle }}</div>
-      <form id="contactForm" action="#" method="post">
-        <div class="form-group">
-          {% for field, label in inquiry.inquiryDetails.items() %}
-            <input type="text" id="{{ field }}" name="{{ field }}" placeholder="{{ label }}*" autocomplete="off">
-          {% endfor %}
-        </div>
-        <div class="inquiryButton">
-            <button class="inquiryBtn" type="submit">Send Inquiry</button>
-        </div>
-      </form>
+      <div class="contactForm">
+        <div class="title-text">{{ inquiry.inquiryTitle }}</div>
+        <form id="contactForm" action="#" method="post">
+          <div class="form-group">
+            {% for field, label in inquiry.inquiryDetails.items() %}
+              <input type="text" id="{{ field }}" name="{{ field }}" placeholder="{{ label }}*" autocomplete="off">
+            {% endfor %}
+          </div>
+          <div class="inquiryButton">
+              <button class="inquiryBtn" type="submit">Send Inquiry</button>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
   <section id="9">
@@ -1993,7 +2094,7 @@
       </div>
     </footer>
 
-  <nav class="floating-menu">
+  <!-- <nav class="floating-menu">
     <div class="sideMenuTitle" id="toggleMenu">        
       <p classs="subtext">MENU<p>
       <i class="material-icons">segment</i>
@@ -2005,8 +2106,7 @@
         <a href="#{{ loop.index }}" class="scroll-link" id="menu{{ loop.index }}">{{ item }}</a>
       {% endfor %}
         <a href="#home" id="home"><i class="material-icons">keyboard_arrow_up</i> Back to Top</a>
-
-  </nav>
+  </nav> -->
 
   <div  id="share-buttons">
     {% for platform, details in socialShare.items() %}
@@ -2168,33 +2268,47 @@
     }
   }
 
-  window.onscroll = function() {
-    scrollFunction();
-  };
+  // window.onscroll = function() {
+  //   scrollFunction();
+  // };
 
-  function scrollFunction() {
-    var section2 = document.getElementById("details");
-    var floatingMenu = document.querySelector('.floating-menu');
-    if (document.body.scrollTop > section2.offsetTop || document.documentElement.scrollTop > section2.offsetTop) {
-      floatingMenu.style.transform = "translateX(0%)";
-    } else {
-      floatingMenu.style.transform = "translateX(120%)";
-    }
-  }
+  // function scrollFunction() {
+  //   var section2 = document.getElementById("details");
+  //   var floatingMenu = document.querySelector('.navbar');
+  //   if (document.body.scrollTop > section2.offsetTop || document.documentElement.scrollTop > section2.offsetTop) {
+  //     floatingMenu.style.transform = "translateY(0%)";
+  //   } else {
+  //     floatingMenu.style.transform = "translateY(120%)";
+  //   }
+  // }
 
-  document.getElementById('toggleMenu').addEventListener('click', function() {
-    var sideMenu = document.getElementById('sideMenu');
-    if (sideMenu.style.transform === 'translateX(0%)') {
-      sideMenu.style.transform = 'translateX(100%)'; 
-    } else {
-      sideMenu.style.transform = 'translateX(0%)';
-    }
-  });
+  // window.onscroll = function() {
+  //   scrollFunction();
+  // };
 
-  document.getElementById('closeMenu').addEventListener('click', function() {
-    var sideMenu = document.getElementById('sideMenu');
-    sideMenu.style.transform = 'translateX(100%)'; 
-  });
+  // function scrollFunction() {
+  //   var section2 = document.getElementById("details");
+  //   var floatingMenu = document.querySelector('.floating-menu');
+  //   if (document.body.scrollTop > section2.offsetTop || document.documentElement.scrollTop > section2.offsetTop) {
+  //     floatingMenu.style.transform = "translateX(0%)";
+  //   } else {
+  //     floatingMenu.style.transform = "translateX(120%)";
+  //   }
+  // }
+
+  // document.getElementById('toggleMenu').addEventListener('click', function() {
+  //   var sideMenu = document.getElementById('sideMenu');
+  //   if (sideMenu.style.transform === 'translateX(0%)') {
+  //     sideMenu.style.transform = 'translateX(100%)'; 
+  //   } else {
+  //     sideMenu.style.transform = 'translateX(0%)';
+  //   }
+  // });
+
+  // document.getElementById('closeMenu').addEventListener('click', function() {
+  //   var sideMenu = document.getElementById('sideMenu');
+  //   sideMenu.style.transform = 'translateX(100%)'; 
+  // });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -2212,6 +2326,28 @@
     });
   });
 
+  document.addEventListener("DOMContentLoaded", function() {
+        const tabs = document.querySelectorAll('.showcase-tab');
+        const contents = document.querySelectorAll('.showcase-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                const tabData = this.getAttribute('tab-data');
+                contents.forEach(content => {
+                    if (content.id === tabData) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        });
+  });
   document.addEventListener("DOMContentLoaded", function() {
     function isValidEmail(email) {
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

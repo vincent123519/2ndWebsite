@@ -33,6 +33,7 @@ def generate_html(config_file, template_file, output_file):
         propertyAddress=home_data.get('propertyAddress', ''),
         images=home_data.get('images', {}),
         imageCount=imageCount,
+        homeVideo=home_data.get('homeVideo', ''),
         title=home_data.get('title', ''),
         menu=home_data.get('menu', []),
         openHouse=home_data.get('openHouse',[]),
