@@ -20,18 +20,12 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <style>
-    h1 {
-      font-size: 6vw;
-      margin-bottom: 1vw;
-      color: white;
-    }
     h2 {
-      font-size: 1.5vw;
+      font-size: 3vw;
     }
     h3 {
-      font-size: 2.5em;
+      font-size: 1.5vw;
       margin-bottom: 20px;
-      color: white;
     }
     h4 {
       font-size: 1vw;
@@ -135,11 +129,10 @@
     }
     #home {
       position: relative;
-      overflow: hidden;
-      height: 50vw; 
     }
     #homeVideoPlayer {
       width: 100%;
+      margin-top: 56px;
     }
     .navbar {
       display: flex;
@@ -148,51 +141,30 @@
       align-items: center;
       grid-gap: 50px;
       padding: 0;
-      height: 50px;
+      height: 56px;
+      position: fixed;
+      background-color: white;
+      width: 100%;
+      z-index: 99;
+      box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.14);
     }
     .title {
       color: black;
-      font-size: 18px;
+      font-size: 1.2vw;
       position: relative;
-      left: 90px;
-    }
-    .address-bot {
-      font-size: 45px;
-      z-index: 999;
-      font: europa,"Open Sans",sans-serif !important;
-      font-weight: 700;
-      white-space: nowrap;
-      /* margin: 1% 1% 0 10%; */
-      position: absolute;
-      color: white;
-      left: 12vh;
-      top: 815px;
-    }
-    .address-bot2 {
-      font-size: 20px;
-      z-index: 999;
-      font: europa,"Open Sans",sans-serif !important;
-      font-weight: 700;
-      white-space: nowrap;
-      position: absolute;
-      color: white;
-      left: 12vh;
-      top: 870px;
+      left: 25px;
     }
     .requests {
+      font-size: 1.2vw;
+      position: relative;
+      right: 18px;
+    }
+    .requests:hover {
       color: black;
-      font-size: 18px;
-      z-index: 999;
-      font: europa,"Open Sans",sans-serif !important;
-      font-weight: 700;
-      white-space: nowrap;
-      margin: 0 5% 0 10%;
-      position: absolute;
-      right: 0;
-      top: 12px;
+      text-decoration: none;
     }
     .tv {
-      border-right: 18px solid white;
+      border-right: 19px solid white;
       border-left: 19px solid white;
     }
     .homevideo {
@@ -204,63 +176,33 @@
       font-family: "Raleway","Open Sans",Helvetica,Arial,sans-serif;
       color: black;
       position: relative;
-      font-size: 18px;
     }
     #menu a {
       color: black;
-      font-family: "Raleway","Open Sans",Helvetica,Arial,sans-serif;
       text-decoration: none;
       padding: 0 .4vw;
-      font-size: 16px;
-      z-index: 999;
+      font-size: 1vw;
     }
-    .slideshow {
-      max-width: 100%;
-      height: 100vh;
-      animation: fade 30s infinite;
-    }
-      @keyframes fade {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    .slideshow img {
+    .address {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      animation: zoominout 10s infinite alternate;
-    }
-      @keyframes zoominout {
-        0% {
-            transform: scale(1.02);
-        }
-        100% {
-            transform: scale(1.01);
-        }
-      }
-    .slideshow img.active {
-      opacity: 1;
+      bottom: 0;
+      left: 16px;
+      padding: 0.6vw 5vw;
+      font-size: 2vw;
+      color: white;
     }
     .price {
-    background-color: #FFFFFF;
-    position: absolute;
-    bottom: 0;
-    right: 16px;
-    padding: 0.6vw 5vw;
-    font-size: 2vw;
-    border: 1px solid white;
+      background-color: #FFFFFF;
+      position: absolute;
+      bottom: 0;
+      right: 16px;
+      padding: 0.6vw 5vw;
+      font-size: 2vw;
     }
     #details {
       text-align: center;
       margin: 2vw 0;
       border-bottom: 1px solid #ccc;
-      /* border: 2px solid blue; */
     }
     #details-menu {
       display: flex;
@@ -295,7 +237,6 @@
       align-items: center;
       flex-direction: row;
       justify-content: space-evenly;
-      /* width: 100%; */
       grid-gap: 20px;
       margin: 0 4vw;
     }
@@ -305,7 +246,6 @@
       align-items: center;
       flex-direction: row;
       justify-content: space-evenly;
-      /* width: 100%; */
       grid-gap: 20px;
       margin: 0 4vw;
     }
@@ -340,14 +280,12 @@
       background-color: rgba(0,0,0,0.12);
       transform: translateX(0%) scale(1.010);
     }
-  
     .topPhoto,
     .bottomPhoto{
       margin: 20px;
     }
     #features {
       width: 40vw;
-      /* height: 60vh; */
     }
     #feature-title {
       display: flex;
@@ -386,10 +324,9 @@
       display: flex;
       margin: 2vw auto;
       width: 60vw;
-      /* height: 100%; */
-      box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.81);
-      -webkit-box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.81);
-      -moz-box-shadow: 2px 2px 13px 1px rgba(0,0,0,0.81);
+      box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.81);
+      -webkit-box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.81);
+      -moz-box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.81);
     }
     .galleryItem {
       display: grid;
@@ -410,7 +347,6 @@
       top: 10px;
       justify-content: center;
       align-items: center;
-      /* background-color: #F5F9FF; */
     }
     .propertyMedia {
       display: flex;
@@ -421,7 +357,6 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      /* background-color: #F5F9FF; */
       font-size: 2vw;
     }
     .showcase-tabs-wrapper a {
@@ -498,6 +433,21 @@
     .google-maps-section {
       text-align: center;
     }
+    .location {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 3vw;
+      text-transform: uppercase;
+    }
+    .leftAddress {    
+      font-size: 2vw;
+    }
+    .rightAddress p {
+      font-size: 1.5vw;
+      margin-bottom: 0;
+    }
     .googleMap {
       width: 65%;
       height: 60vh;
@@ -511,7 +461,6 @@
       text-align: center;
       background-color: #f9f9f9;
     }
-
     .contactForm {
       margin: 3vw 0;
     }
@@ -573,11 +522,11 @@
       width: 10vw;
     }
     footer {
-      background-color: #3f3939;
+      background-color: black;
       color: white;
       text-align: center;
       padding: .5vw 0;
-      width: 100vw;
+      width: 100%;
       position: fixed;
       bottom: 0;
       left: 0;
@@ -610,9 +559,10 @@
       width: 90%;
     }
     .floating-menu {
+      display: none;
       position: fixed;
       z-index: 1;
-      top: 2vw;
+      top: 5vw;
       right: 1vw;
       background-color: #fff;
       width: 7vw;
@@ -636,12 +586,12 @@
       right: 0;
       float: right;
       width: 15vw;
-      height: 100%;
+      height: 100vh;
       padding: 1vw;
       position: fixed;
       color: #000;
       background-color: #fff;
-      z-index: 100;
+      z-index: 999;
       border-left: solid 3px #000;
       transition: transform 0.3s ease; 
       transform: translateX(100%);
@@ -666,7 +616,7 @@
       padding-top: 50px;
       left: 0;
       top: 0;
-      width: 100vw;
+      width: 100%;
       height: 100%;
       overflow: auto;
       background-color: black;
@@ -789,7 +739,7 @@
     .custom-modal {
       display: none;
       position: fixed;
-      z-index: 100;
+      z-index: 1000;
       padding-top: 50px;
       left: 0;
       top: 0;
@@ -852,7 +802,7 @@
     }
     #share-buttons li {
       display: flex;
-      background-color: #333;
+      background-color: black;
     }
     #share-buttons img {
       width: 2vw;
@@ -868,9 +818,21 @@
     }
 
 /* Ipad*/
-/* @media only screen and (min-device-width: 451px) and (max-device-width: 1000px) {
-   .title-text {
-      font-size: 6vw;
+@media only screen and (min-device-width: 451px) and (max-device-width: 1100px) {
+    h2 {
+      font-size: 4vw;
+    }
+    h3 {
+      font-size: 3vw;
+    }
+    h4 {
+      font-size: 3vw;
+      margin-top: 3vw;
+      color: black;
+      padding-left: 0;
+    }
+    .title-text {
+      font-size: 4vw;
       padding: 0;
       font-family: "Oswald";
     }
@@ -891,88 +853,47 @@
     .text {
       font-size: 2vw;
     }
-    h1 {
-      font-size: 10vw;
-      margin-bottom: 40px;
-      color: white;
-    }
-    h2 {
-      font-size: 3vw;
-    }
-    h3 {
-      font-size: 6vw;
-      margin-bottom: 15px;
-      color: white;
-    }
-    h4 {
-      font-size: 5vw;
-      color: black;
-    }
     body {
       width: 100%;
       margin: 0;
     }
     #home {
       width: 100%;
-      height: 50vh;
     }
-    .slideshow {
-      max-width: 100%;
-      height: 100%;
+    #homeVideoPlayer {
+      width: 104%;
+      margin-top: 76px;
     }
-    .slideshow img {
-      width: 100%;
-    }
-      @keyframes zoominout {
-        0% {
-            transform: scale(1.2);
-        }
-        100% {
-            transform: scale(1);
-        }
-      }
     .navbar {
       display: flex;
       flex-direction: row;
       align-items: center;
       grid-gap: 5px;
       z-index: 998;
+      height: 76px;
     }
     .title {
-      font-size: 6vw;
-      justify-content: flex-start;
-      margin: 3% 1% 0 4%;
-    }
-    .sideMenu {
-      top: 0;
-      right: 0;
-      float: right;
-      width: 200px;
-      height: 100%;
-      padding: 25px;
-      position: fixed;
-      color: #000;
-      background-color: #fff;
-      z-index: 1000;
-      border-left: solid 3px #000;
-      transition: transform 0.3s ease; 
-      transform: translateX(100%);
-    }  
-    .sideMenu a {
       font-size: 4vw;
-    }
-    .sideMenu i.material-icons {
-      font-size: 50px;
+      left: 30px;
     }
     #menu {
       display: none;
     }
-    #scroll-button {
-      height: 8vw;
-      width: 8vw;
+    .requests {
+      font-size: 3.5vw;
     }
-    #scroll-button i {
-      font-size: 3vw;
+    .address {
+      color: black;
+      position: relative;
+      padding: 0 1vw;
+    }
+    .price {
+      background-color: black;
+      color: white;
+      font-size: 4vw;
+      left: 16px;
+      position: relative;
+      width: fit-content;
     }
     #details {
       justify-content: center;
@@ -980,21 +901,23 @@
       padding: 4vw 0 6vw 0;
       grid-gap: 2vw;
     }
-    .detail-item {
-      width: 50%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
+    #details-menu {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 20px;
+      justify-content: space-evenly;
+      justify-items: start;
+      align-items: center;
+      margin: 2vw;
+
     }
     .detail-item .material-icons {
-      font-size: 3vw;
+      font-size: 4vw;
     }
     .propertyAddress {
-      justify-content: center;
+      justify-content: flex-start;
       display: flex;
-      font-size: 6vw;
-      margin-top: 8vw;
+      font-size: 5vw;
     }
     #propertyDescription {
       justify-content: center;
@@ -1008,105 +931,74 @@
       padding: 5vw;
       text-align: justify;
     } 
+    .photoGrid {
+      display: grid;
+      box-shadow: 8px 18px 30px -10px rgba(0,0,0,0.25);
+      width: 80%;
+    }
+    .gridItem {
+      display: flex;
+      flex-direction: row;
+    }
     .modalImages {
       width: 100%;
-      border-right: 4vw solid #feeca4f2;
-      border-bottom: 4vw solid #feeca4f2;
-
     }
-    .side-modalImages {
-      width: 100%;
-      border-right: 4vw solid #feeca4f2;
-      border-bottom: 4vw solid #feeca4f2;
+    .modalImagesBottom {
+      width: 50%;
     }
     .topPhoto,
     .bottomPhoto{
       margin: 20px;
       width: 100%;
-      justify-content: flex-end;
-    }
-    .circle {
-      width: 100vw;
-    }
-    .desc-void {
+      display: flex;
       justify-content: center;
-      border: 2px solid black;
-      width: 60vw;
-      height: 60vw;
-      font-size: 7vw;
     }
-    .open-house-preview {
-        font-size: 3vw;
-    }
-    .view-details-cta {
-      font-size: 3vw;
+    #features {
+      width: 100%;
+      padding: 5vw;
     }
     #feature-title {
-      font-size: 6vw;
+      font-size: 4vw;
+      justify-content: flex-start;
     }
     #feature-list {      
       display: flex;
-      max-width: 90%;
-      margin-top: 8vw;
+      margin: 4vw auto;
+      justify-content: flex-start;
     }
     #feature-list a {
-      margin-right: 20px; 
-      margin-bottom: 10px;
-      padding: 8px 15px;
-      border-radius: 20px; 
-      font-size: 3vw;
-      text-decoration: none;
-      border: 1px solid black;
-      transition: background-color 0.3s;
-      text-align: center;
+    margin-right: 1vw;
+    margin-bottom: 2vw;
+    padding: 1vw 1vw;
+    font-size: 2vw;
     }
     .feature-text {
       font-size: 3vw;
       font-family: "Oswald";
     }
-    #carousels {
-      height: 40vh;
+    .galleryText {
+      font-size: 3vw;
     }
-    .carousel-row {
-      display: block; 
-      white-space: nowrap; 
+    .gallery {
+      margin: 8vw auto;
+      width: 80%;
     }
-    .carousel-img {
-      display: inline-block; 
-      width: 18%;
-      height: 20vh;
-      margin-right: 15px;
-      margin-bottom: 15px;
+    .galleryItem {
+      margin: 0 auto;
     }
-    .carousel-container {
-      overflow: hidden;
-      padding-top: 4vw;
-      padding-bottom: 4vw;
+    .photo:hover{
+      background: rgba(0,0,0,0.12);
+      transform: translateX(0%) scale(1.010);
     }
-    .carousels img {
-        flex: 0 0 auto;
-        width: 32vw;
-        margin-right: 1vw;
-    }
-    #first-carousel {
-        display: flex;
-        animation: scrollAnimation 60s linear infinite;
-    }
-    #first-carousel:hover{
-        animation-play-state: paused;
-    }
-    #second-carousel {
-        display: flex;
-        animation: scrollAnimationOpposite 60s linear infinite;
-    }
-    #second-carousel:hover{
-        animation-play-state: paused;
+    .photo {
+      width: 20vw;
+      text-align: center;
     }
     .propertyVideos {
       top: 10px;
     }
     .propertyCategory {
-      font-size: 6vw;
+      font-size: 4vw;
     }
     .floorPlanImage img {
       width: 80vw;
@@ -1125,20 +1017,26 @@
       width: 100%;
     }
     .centerTitle {
-      font-size: 6vw;
+      font-size: 5vw;
+    }
+    .leftAddress {    
+      font-size: 4vw;
+    }
+    .rightAddress {
+      font-size: 2.5vw;
+    }
+    .googleMap {
+      width: 80%;
+      height: 30vh;
     }
     .realtorDetails {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
     }
     .realtor {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
+      flex-direction: row;
       align-items: center; 
       width: 100%;
     }
@@ -1151,9 +1049,9 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
       text-align: center;
-      width: 60vw;
+      margin-left: 5vw;
     }
     .realtor-details p {
       padding: 1%;
@@ -1161,7 +1059,7 @@
       font-size: 2vw;
     }
     .realtor-img {
-      width: 20vw; 
+      width: 25vw; 
     }
     .realtorImg {
       display: flex;
@@ -1169,7 +1067,8 @@
       justify-content: flex-start;
     }
     .contact-form-section {
-      max-width: 60vw;
+      width: 104%;
+      padding: 5vw;
     }
     .form-group label {
       font-size: 2vw;
@@ -1177,10 +1076,7 @@
     .form-group input[type="text"] {
       width: 50vw;
       border-bottom: .2vw solid black;
-    }
-    .inquiryButton {
-      flex-direction: column;
-      width: 60vw;
+      font-size: 2vw;
     }
     .inquiryBtn {
       font-size: 3vw;
@@ -1200,11 +1096,11 @@
       padding-bottom: 10vw;
     }
     .revaLogo {
-      width: 20vw;
+      width: 25vw;
     }
     .footertext {
-      font-size: 3vw;
-      margin: 10vw 0 10vw 0;
+      font-size: 2vw;
+      margin: 10vw;
     }
     .footerImage {
       width: 30%;
@@ -1218,43 +1114,51 @@
       margin: 0 2vw;
     }
     .socmed li img {
-      width: 5vw;
-      height: 5vw;
+      width: 4vw;
+      height: 4vw;
     }
     .floating-menu {
-      top: 5vw;
-      right: 4vw;
-      width: 14vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 1vw;
+      position: relative;
+      background-color: transparent;
+      top: 0px;
+      right: 34px;
+      z-index: 999;
+      transition: none;
+      transform: none;
+      box-shadow: none;
     }
     .sideMenuTitle p, .material-icons {
-      font-size: 2.5vw;
+      font-size: 3.5vw;
     }
     .sideMenu {
-      width: 25vw;
-      height: 100%;
+      width: 50vw;
       padding: 2vw;
+      background-color: rgba(255, 255, 255, 0.885);
     }
     .sideMenu a {
       margin-bottom: 10px;
       padding: 5px;
-      font-size: 2.5vw;
+      font-size: 5vw;
     }
     .sideMenu i.material-icons {
-      font-size: 3vw;
+      font-size: 6vw;
     }
     .slideshowModal {
       z-index: 1000;
     }
     .slideshowModal-img {
       width: 70vw; 
-      left: 16vw;
+      left: 14vw;
       top: 32vw;
     }
     .closeSlideshow {
       top: 4vw;
       right: 8vw;
-      font-size: 6vw;
+      font-size: 10vw;
     }
     .prev, .next {
       top: 50%;
@@ -1310,13 +1214,13 @@
     }
     .custom-modal-content {
       width: 70vw;
-      left: 16vw;
+      left: 14vw;
       top: 32vw;
     }
     .custom-close {
-      top: 1vw;
+      top: 8vw;
       right: 4vw;
-      font-size: 6vw;
+      font-size: 10vw;
     }
     .custom-carousel-img {
       width: 100px; 
@@ -1339,54 +1243,49 @@
       top: 54vw;
     }
     #share-buttons img {
-      width: 3vw;
+      width: 4vw;
       margin: .4vw;
     }
-} */
+}
 
 /* Mobile Phones */
-/* @media only screen and (min-device-width: 220px) and (max-device-width: 450px) {
-   .title-text {
-      font-size: 10vw;
-      padding: 0;
-      font-family: "Oswald";
-    }
-    .address-text {
-      font-size: 5vw;
-      text-align: left;
-    }
-    .subtext {
-      font-size: 4vw;
-    }
-    .med-text {
-      font-size: 6vw;
-      padding: 0;
-    }
-    .text {
-      font-size: 4vw;
-    }
-    .text-center {
-      font-size: 2vw;
-    }
-    .footer .text {
-      font-size: 4vw;
-    }
-    h1 {
-      font-size: 4em;
-      margin-bottom: 40px;
-      color: white;
+@media only screen and (min-device-width: 220px) and (max-device-width: 450px) {
+    #menu {
+      display: none;
     }
     h2 {
       font-size: 6vw;
     }
     h3 {
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      color: white;
+      font-size: 4vw;
     }
     h4 {
-      font-size: 8vw;
+      font-size: 3vw;
+      margin-top: 3vw;
       color: black;
+      padding-left: 0;
+    }
+    .title-text {
+      font-size: 6vw;
+      padding: 0;
+      font-family: "Oswald";
+    }
+    .address-text {
+      font-size: 4vw;
+      text-align: left;
+    }
+    .subtext {
+      font-size: 2vw;
+    }
+    .med-text {
+      font-size: 5vw;
+      padding: 0;
+    }
+    .text-center {
+      font-size: 1.5vw;
+    }
+    .text {
+      font-size: 2vw;
     }
     body {
       width: 100%;
@@ -1394,88 +1293,62 @@
     }
     #home {
       width: 100%;
-      height: 50vh;
     }
-    .slideshow {
-      max-width: 100%;
-      height: 100%;
+    #homeVideoPlayer {
+      width: 104%;
+      margin-top: 76px;
     }
-    .slideshow img {
-      width: 100%;
-    }
-      @keyframes zoominout {
-        0% {
-            transform: scale(1.2);
-        }
-        100% {
-            transform: scale(1);
-        }
-      }
     .navbar {
       display: flex;
       flex-direction: row;
       align-items: center;
       grid-gap: 5px;
       z-index: 998;
+      height: 56px;
     }
     .title {
-      font-size: 8vw;
-      justify-content: flex-start;
-      margin: 3% 1% 0 4%;
+      font-size: 5vw;
+      left: 18px;
     }
-    .floating-menu {
-      width: 22vw;
-      top: 8vw;
-      padding: 2vw;
-    }
-    .sideMenuTitle p, .material-icons {
+    .requests {
       font-size: 4vw;
     }
-    .sideMenu {
-      width: 38vw;
-      height: 100%;
-      padding: 4vw;
+    .address {
+      color: black;
+      position: relative;
+      padding: 0 1vw;
     }
-    .sideMenu a {
-      margin-bottom: 2vw;
-      padding: 1vw;
-      font-size: 4vw;
-    }
-    .sideMenu i.material-icons {
+    .price {
+      background-color: black;
+      color: white;
       font-size: 6vw;
-      width: auto;
-    }
-    #menu {
-      display: none;
-    }
-    #scroll-button {
-      height: 60px;
-      width: 60px;
-    }
-    #scroll-button i {
-      font-size: 1em;
+      left: 16px;
+      position: relative;
+      width: fit-content;
     }
     #details {
       justify-content: center;
       max-height: 100%;
-      padding: 30px 20px;
-      grid-gap: 20px;
+      padding: 4vw 0 6vw 0;
+      grid-gap: 2vw;
     }
-    .detail-item {
-      width: 50%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
+    #details-menu {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 20px;
+      justify-content: space-evenly;
+      justify-items: start;
+      align-items: center;
+      margin: 2vw;
+
     }
     .detail-item .material-icons {
-      font-size: 6vw;
+      font-size: 4vw;
     }
     .propertyAddress {
-      justify-content: center;
+      justify-content: flex-start;
       display: flex;
-      font-size: 8vw;
-      margin: 20vw 0 10vw 0;
+      font-size: 7vw;
     }
     #propertyDescription {
       justify-content: center;
@@ -1486,121 +1359,83 @@
     .description {
       width: 100%;
       font-size: 4vw;
-      padding: 5vw 10vw 10vw 10vw;
+      padding: 5vw;
+      text-align: justify;
     } 
+    .photoGrid {
+      display: grid;
+      box-shadow: 8px 18px 30px -10px rgba(0,0,0,0.25);
+      width: 100%;
+    }
+    .gridItem {
+      display: flex;
+      flex-direction: row;
+    }
     .modalImages {
       width: 100%;
-      border-right: 4vw solid #feeca4f2;
-      border-bottom: 4vw solid #feeca4f2;
+
     }
-    .side-modalImages {
-      width: 100%;
-      border-right: 4vw solid #feeca4f2;
-      border-bottom: 4vw solid #feeca4f2;
+    .modalImagesBottom {
+      width: 50%;
     }
     .topPhoto,
     .bottomPhoto{
       margin: 20px;
       width: 100%;
-      justify-content: flex-end;
-    }
-    .circle {
-      width: 100vw;
-    }
-    .desc-void {
+      display: flex;
       justify-content: center;
-      border: 2px solid black;
-      width: 80vw;
-      height: 80vw;
-      font-size: 10vw;
     }
-    .open-house-preview {
-        font-size: 4vw;
-    }
-    .view-details-cta {
-      font-size: 4vw;
+    #features {
+      width: 100%;
+      padding: 5vw;
     }
     #feature-title {
-      font-size: 8vw;
-      padding: 0;
-      font-family: "Oswald";
-      text-align: center;
+      font-size: 7vw;
+      justify-content: flex-start;
     }
     #feature-list {      
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: stretch;
-      max-width: 90%;
-      align-content: center;
-      justify-content: center;    
-      margin-top: 4%;
+      margin: 4vw auto;
+      justify-content: flex-start;
     }
     #feature-list a {
-      margin-right: 20px; 
-      margin-bottom: 10px;
-      padding: 8px 15px;
-      border-radius: 20px; 
-      background-color: #f0f0f0; 
-      color: #333; 
-      font-size: 4vw;
-      text-decoration: none;
-      border: 1px solid black;
-      transition: background-color 0.3s;
-      text-align: center;
+    margin-right: 1vw;
+    margin-bottom: 2vw;
+    padding: 1vw 1vw;
+    font-size: 4vw;
     }
     .feature-text {
-      font-size: 4vw;
+      font-size: 5vw;
       font-family: "Oswald";
     }
-    #carousels {
-      height: 40vh;
+    .galleryText {
+      font-size: 3vw;
     }
-    .carousel-row {
-      display: block; 
-      white-space: nowrap; 
+    .gallery {
+      margin: 8vw auto;
+      width: 80%;
     }
-    .carousel-img {
-      display: inline-block; 
-      width: 18%;
-      height: 20vh;
-      margin-right: 15px;
-      margin-bottom: 15px;
+    .galleryItem {
+      grid-template-columns: auto auto;
     }
-    .carousel-container {
-      overflow: hidden;
-      padding-top: 4vw;
-      padding-bottom: 4vw;
+    .photo:hover{
+      background: rgba(0,0,0,0.12);
+      transform: translateX(0%) scale(1.010);
     }
-    .carousels img {
-      flex: 0 0 auto;
-      width: 30vw;
-      margin-right: 1vw;
-    }
-    #first-carousel {
-      display: flex;
-      animation: scrollAnimation 60s linear infinite;
-    }
-    #first-carousel:hover{
-      animation-play-state: paused;
-    }
-    #second-carousel {
-      display: flex;
-      animation: scrollAnimationOpposite 60s linear infinite;
-    }
-    #second-carousel:hover{
-      animation-play-state: paused;
+    .photo {
+      width: 40vw;
+      text-align: center;
     }
     .propertyVideos {
       top: 10px;
     }
-    #videoPlayer {
-      width: 80vw;
-    }
     .propertyCategory {
-      font-size: 8vw;
+      font-size: 4vw;
     }
     .floorPlanImage img {
+      width: 80vw;
+    }
+    #videoPlayer {
       width: 80vw;
     }
     .propertyRealtor {
@@ -1610,47 +1445,47 @@
       justify-content: space-between;
       flex-direction: column;
       max-height: 100%;
-      margin: 50px 0 0 0;
+      margin-top: 15px;
       width: 100%;
     }
     .centerTitle {
-      font-size: 8vw;
+      font-size: 5vw;
+    }
+    .googleMap {
+      width: 80%;
+      height: 30vh;
     }
     .realtorDetails {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
     }
     .realtor {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
+      flex-direction: row;
       align-items: center; 
       width: 100%;
     }
     .realtor-info {
       display: flex;
       margin: 1%;
-      font-size: 6vw;
+      font-size: 4vw;
     }
     .realtor-details {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
       text-align: center;
-      width: 60%;
+      margin-left: 5vw;
     }
     .realtor-details p {
       padding: 1%;
       text-align: center;
-      font-size: 4vw;
+      font-size: 2vw;
     }
     .realtor-img {
-      width: 20vw; 
+      width: 32vw; 
     }
     .realtorImg {
       display: flex;
@@ -1658,105 +1493,106 @@
       justify-content: flex-start;
     }
     .contact-form-section {
-      max-width: 60%;
-      margin: 15vw auto;
+      width: 104%;
     }
     .form-group label {
-      font-size: 4vw;
+      font-size: 2vw;
     }
     .form-group input[type="text"] {
       width: 50vw;
-    }
-    .inquiryButton {
-      flex-direction: column;
-      width: 60vw;
+      border-bottom: .2vw solid black;
+      font-size: 2vw;
     }
     .inquiryBtn {
-      font-size: 4vw;
+      font-size: 3vw;
       width: 50vw;
+      border: .2vw solid black;
     }
     .footer {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      width: 100%;
+      width: 100vw;
     }
     .footerDetails {
-      max-width: 65%;
-      margin: 15vw;
-    }
-    .revaLogo {
-      width: 38vw;
-    }
-    .footertext {
-      font-size: 4vw;
-      margin: 10vw 0 10vw 0;
+      max-width: 65vw;
+      margin: 10vw auto;
       padding-bottom: 10vw;
     }
-    .footerImage {
-      width: 30%;
-      height: 30%;
+    .revaLogo {
+      width: 25vw;
+    }
+    .footertext {
+      font-size: 2vw;
+      margin: 10vw;
     }
     .socmed ul{
-      margin: 2vw;
-      padding: 2vw;
+      margin: .5vw;
+      padding: .5vw;
     }
     .socmed li {
       margin: 0 2vw;
     }
     .socmed li img {
-      width: 6vw;
-      height: 6vw;
+      width: 8vw;
+      height: 8vw;
     }
     .floating-menu {
-      top: 8vw;
-      right: 4vw;
-      width: 25vw;
-      padding: 2.5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1vw;
+      position: relative;
+      background-color: transparent;
+      top: 0px;
+      right: 28px;
+      z-index: 999;
+      transition: none;
+      transform: none;
+      box-shadow: none;
     }
     .sideMenuTitle p, .material-icons {
-      font-size: 4vw;
-      width: auto;
+      font-size: 4.5vw;
     }
     .sideMenu {
-      width: 45vw;
-      height: 100%;
-      padding: 4vw;
+      width: 100%;
+      padding: 10vw;
+      z-index: 999;
+      background-color: rgba(255, 255, 255, 0.885);
     }
     .sideMenu a {
       margin-bottom: 10px;
       padding: 5px;
-      font-size: 5vw;
+      font-size: 6vw;
     }
     .sideMenu i.material-icons {
-      font-size: 6vw;
+      font-size: 9vw;
+      margin-right: 6vw;
     }
     .slideshowModal {
       z-index: 1000;
     }
     .slideshowModal-img {
       width: 70vw; 
-      left: 15vw;
-      top: 55vw;
+      left: 17%;
+      top: 32%;
     }
     .closeSlideshow {
       top: 4vw;
       right: 8vw;
-      font-size: 10vw;
+      font-size: 12vw;
     }
     .prev, .next {
-      top: 50%;
-      margin-top: -4vw auto;
+      top:40%;
+      padding: 2vw 50vw;
       font-size: 6vw;
     }
     .prev {
-      right: 78vw;
-      top: 72vw;
+      right: 40vw;
     }
     .next {
-      left: 78vw;
-      top: 72vw;
+      left: 40vw;
     }
     .close i {
       position: absolute;
@@ -1770,14 +1606,14 @@
     }
     .slideshowModal-images {
       width: 70vw;
-      left: 15vw;
-      top: 55vw;
+      left: 16vw;
+      top: 32vw;
       position: fixed;
     }
     .slideshow-close-buttons {
       top: 4vw;
       right: 8vw;
-      font-size: 10vw;
+      font-size: 6vw;
     }
     .prev-buttons, .next-buttons {
       top: 50%;
@@ -1786,22 +1622,24 @@
       font-size: 6vw;
     }
     .prev-buttons {
-      right: 42vw;
-      top: 80vw;
+      right: 40vw;
+      top: 50vw;
     }
     .next-buttons {
-      left: 42vw;
-      top: 80vw;
+      left: 40vw;
+      top: 50vw;
+    }
+    .close i {
+      font-size: 6vw;
     }
     .custom-modal-content {
       width: 70vw;
-      position: fixed;
-      top: 50vw;
-      left: 15vw;
+      left: 16vw;
+      top: 32%;
     }
     .custom-close {
-      top: 8vw;
-      right: 8vw;
+      top: 4vw;
+      right: 12vw;
       font-size: 10vw;
     }
     .custom-carousel-img {
@@ -1809,40 +1647,51 @@
       margin: 10px;
     }
     .custom-prev, .custom-next {
-      top: 50%;
-      padding: 2vw 8vw;
-      margin-top: -4vw auto;
+      top: 43%;
+      width: auto;
+      padding: 2vw 40vw;
       font-size: 6vw;
+      border-radius: 0 3px 3px 0;
     }
     .custom-prev {
-      right: 81vw;
-      top: 72vw;
+      right: 50vw;
     }
     .custom-next {
-      left: 81vw;
-      top: 72vw;
+      left: 48vw;
     }
     #share-buttons img {
-      width: 6vw;
+      width: 8vw;
       margin: .4vw;
     }
-} */
+}
   </style>
 
 </head>
 <body>
+
   <section id="home">
     <div id="home">
       <div class="navbar">
         <div  class="title">{{ propertyAddress }}</div>
-        <div class="address-bot">{{ propertyAddress }}</div>
-        <div class="address-bot2">{{ extendedAddress }}</div>
         <div id="menu">
           {% for item in menu %}
             <a href="#{{ loop.index }}" id="menu{{ loop.index }}">{{ item }}</a>
           {% endfor %}
         </div>
         <div><a href="#8" class="requests">REQUEST INFO</a>
+        </div>
+        <div class="floating-menu">
+          <div class="sideMenuTitle" id="toggleMenu">        
+            <p classs="subtext">MENU<p>
+            <i class="material-icons">segment</i>
+          </div>
+        </div>
+        <div class="sideMenu" id="sideMenu">
+            <div id="closeMenu"><i class="material-icons">close</i></div>
+            {% for item in menu %}
+              <a href="#{{ loop.index }}" class="scroll-link" id="menu{{ loop.index }}">{{ item }}</a>
+            {% endfor %}
+              <a href="#home" id="home">Back to Top</a>
         </div>
       </div>
       <div class="tv">
@@ -1851,15 +1700,16 @@
           Your browser does not support the video tag.
         </video>
       </div>
-      <div  id="address">{{ propertyAddress }}</div>
+      <div class="address">
+        <h2>{{ propertyAddress }}</h2>
+        <h3>{{ extendedAddress }}<h3>
+      </div>
       <div class="price">
         <p>${{ price }}</p>
       </div>
-      <!-- <button id="scroll-button" onclick="scrollToDescription()">
-        <span><i class="material-icons">south</i></span>
-      </button> -->
     </div>
   </section>
+
   <section id="offered">
     <div id="details">
       <div id="details-menu">
@@ -1872,6 +1722,7 @@
       </div>
     </div>                                                                                                   
   </section>
+
   <section id="1">
     <div id="description">
       <div id="propertyDescription">
@@ -1904,6 +1755,7 @@
       <div class="horizontal-lines"></div>
       </div>
   </section >
+
   <section id="2">
     <div id="propertyDescriptionBottom">
       <div id="features">
@@ -1937,8 +1789,8 @@
       </div>
     </div>
     <div class="horizontal-lines"></div>
-
   </section>
+  
   <section id ="3">
     <div id="customModal" class="custom-modal">
       <span class="custom-close">&times;</span>
@@ -1959,85 +1811,91 @@
       </div>
       <div class="horizontal-lines"></div>
   </section>
+
   <section>
     <div class="showcase-tabs-wrapper text-center">
-      <a href="#" tabindex="0" role="button" tab-data="showcase-videos" class="propertyCategory showcase-tab active">Video</a>
-      <a href="#" tabindex="0" role="button" tab-data="showcase-vtour" class="propertyCategory showcase-tab">3D Tour</a>
-      <a href="#" tabindex="0" role="button" tab-data="showcase-hotspot-floorplans" class="propertyCategory showcase-tab">Floor Plans</a>
+      <a href="#" tabindex="0" role="button" tab-data="4" class="propertyCategory showcase-tab active">Video</a>
+      <a href="#" tabindex="0" role="button" tab-data="5" class="propertyCategory showcase-tab">3D Tour</a>
+      <a href="#" tabindex="0" role="button" tab-data="6" class="propertyCategory showcase-tab">Floor Plans</a>
     </div>  
-    <div id="showcase-videos" class="showcase-content">
-        <section id="4">
-            <div class="propertyVideos">
-                <div class="propertyMedia">
-                    {% for category, videos in videos.items() %}
-                        <div class="propertyCategory">
-                            <div class="videoPlayer">
-                                {% for video_title,video_url in videos.items() %}
-                                    <video controls id="videoPlayer" data-video-url="{{ video_url }}">
-                                        <source src="{{ video_url }}" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    {% endfor %}
+
+    <div id="4" class="showcase-content">
+      <section id="4">
+        <div class="propertyVideos">
+          <div class="propertyMedia">
+            {% for category, videos in videos.items() %}
+              <div class="propertyCategory">
+                <div class="videoPlayer">
+                  {% for video_title,video_url in videos.items() %}
+                    <video controls id="videoPlayer" data-video-url="{{ video_url }}">
+                      <source src="{{ video_url }}" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  {% endfor %}
                 </div>
-            </div>
-        </section>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
     </div>
-  
-    <div id="showcase-vtour" class="showcase-content" style="display: none;">
-        <section id="5">
-            <div class="propertyVideos">
-                <div class="propertyMedia">
-                    {% for category, tours in tours.items() %}
-                        <div class="propertyCategory">
-                            <div class="videoPlayer">
-                                {% for tour_title,video_url in tours.items() %}
-                                    <video controls id="videoPlayer" data-video-url="{{ video_url }}">
-                                        <source src="{{ video_url }}" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    {% endfor %}
+
+    <div id="5" class="showcase-content" style="display: none;">
+      <section id="5">
+        <div class="propertyVideos">
+          <div class="propertyMedia">
+            {% for category, tours in tours.items() %}
+              <div class="propertyCategory">
+                <div class="videoPlayer">
+                  {% for tour_title,video_url in tours.items() %}
+                    <video controls id="videoPlayer" data-video-url="{{ video_url }}">
+                      <source src="{{ video_url }}" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  {% endfor %}
                 </div>
-            </div>
-        </section>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
     </div>
     
-    <div id="showcase-hotspot-floorplans" class="showcase-content" style="display: none;">
-        <section id="6">
-            <div class="propertyVideos">
-                <div class="propertyMedia">
-                    {% for category, plans in plans.items() %}
-                        <div class="propertyCategory">
-                            <div class="floorPlanImage">
-                                {% for plan_title,image_url in plans.items() %}
-                                    <img src="{{ image_url }}" alt="Floor Plan">
-                                {% endfor %}
-                            </div>
-                        </div>
-                    {% endfor %}
+    <div id="6" class="showcase-content" style="display: none;">
+      <section id="6">
+        <div class="propertyVideos">
+          <div class="propertyMedia">
+            {% for category, plans in plans.items() %}
+              <div class="propertyCategory">
+                <div class="floorPlanImage">
+                  {% for plan_title,image_url in plans.items() %}
+                    <img src="{{ image_url }}" alt="Floor Plan">
+                  {% endfor %}
                 </div>
-            </div>
-        </section>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
     </div>
+    
     <div class="horizontal-lines"></div>
   </section>
+
   <section id="7" class="google-maps-section">
-    <div>
-      <div class="">
-        <div class="centerTitle">LOCATION</div>
-        <div class="centerTitle">{{propertyAddress}}, {{extendedAddress}}</div>
+      <div class="location">
+        <div class="leftAddress">LOCATION</div>
+        <div class="rightAddress">
+          <p>{{propertyAddress}}</p>
+          <p>{{extendedAddress}}</p>
+        </div>
       </div>
-    </div>
     <div class="">
       <iframe  class="googleMap" src="{{ googleMapAddress }}" width="700" height="500" frameborder="0" allowfullscreen="" loading="async" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="horizontal-lines"></div>
   </section>
+
   <section>
     <div class="propertyRealtor">
       <p class="centerTitle">{{ propertyRealtor.realtorTitle}}</p>
@@ -2061,6 +1919,7 @@
       </div>
     </div>
   </section>  
+
   <section id = "8">
     <div class="contact-form-section">
       <div class="contactForm">
@@ -2070,43 +1929,31 @@
             {% for field, label in inquiry.inquiryDetails.items() %}
               <input type="text" id="{{ field }}" name="{{ field }}" placeholder="{{ label }}*" autocomplete="off">
             {% endfor %}
-          </div>
-          <div class="inquiryButton">
+            <div class="inquiryButton">
               <button class="inquiryBtn" type="submit">Send Inquiry</button>
+          </div>
           </div>
         </form>
       </div>
     </div>
   </section>
+
   <section id="9">
     <div class="footer">
       <img src={{revaLogo}} class="revaLogo">
         <div class="footertext">{{footerDetails.copyright}}. {{ footerDetails.footerDescription}}</div>
     </div>
   </section>
-    <footer>                                                                                                                                                                  
-      <div  class="socmed">
-        <ul>
-          {% for platform, details in socialMedias.items() %}
-            <li><a href="{{ details[platform + 'Link'] }}"><img src="{{ details[platform + 'Icon'] }}"></a></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </footer>
 
-  <!-- <nav class="floating-menu">
-    <div class="sideMenuTitle" id="toggleMenu">        
-      <p classs="subtext">MENU<p>
-      <i class="material-icons">segment</i>
+  <footer>                                                                                                                                                                  
+    <div  class="socmed">
+      <ul>
+        {% for platform, details in socialMedias.items() %}
+          <li><a href="{{ details[platform + 'Link'] }}"><img src="{{ details[platform + 'Icon'] }}"></a></li>
+        {% endfor %}
+      </ul>
     </div>
-  </nav>
-  <nav class="sideMenu" id="sideMenu">
-      <div id="closeMenu"><i class="material-icons">close</i></div>
-      {% for item in menu %}
-        <a href="#{{ loop.index }}" class="scroll-link" id="menu{{ loop.index }}">{{ item }}</a>
-      {% endfor %}
-        <a href="#home" id="home"><i class="material-icons">keyboard_arrow_up</i> Back to Top</a>
-  </nav> -->
+  </footer>
 
   <div  id="share-buttons">
     {% for platform, details in socialShare.items() %}
@@ -2219,7 +2066,6 @@
     showCustomImage(newImageSrc);
   }
 
-
   // HOME IMAGES
   setInterval(() => {
       currentIndex = (currentIndex + 1) % images.length;
@@ -2241,13 +2087,6 @@
       showImage(currentIndex);
   }, 9000);
 
-  function scrollToDescription() {
-    const descriptionSection = document.getElementById('description');
-    if (descriptionSection) {
-      descriptionSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
   function playVideo(element) {
     var videoPlayer = element.closest('.propertyCategory').querySelector('video');
     var source = videoPlayer.querySelector('source');
@@ -2268,47 +2107,19 @@
     }
   }
 
-  // window.onscroll = function() {
-  //   scrollFunction();
-  // };
+  document.getElementById('toggleMenu').addEventListener('click', function() {
+    var sideMenu = document.getElementById('sideMenu');
+    if (sideMenu.style.transform === 'translateX(0%)') {
+      sideMenu.style.transform = 'translateX(100%)'; 
+    } else {
+      sideMenu.style.transform = 'translateX(0%)';
+    }
+  });
 
-  // function scrollFunction() {
-  //   var section2 = document.getElementById("details");
-  //   var floatingMenu = document.querySelector('.navbar');
-  //   if (document.body.scrollTop > section2.offsetTop || document.documentElement.scrollTop > section2.offsetTop) {
-  //     floatingMenu.style.transform = "translateY(0%)";
-  //   } else {
-  //     floatingMenu.style.transform = "translateY(120%)";
-  //   }
-  // }
-
-  // window.onscroll = function() {
-  //   scrollFunction();
-  // };
-
-  // function scrollFunction() {
-  //   var section2 = document.getElementById("details");
-  //   var floatingMenu = document.querySelector('.floating-menu');
-  //   if (document.body.scrollTop > section2.offsetTop || document.documentElement.scrollTop > section2.offsetTop) {
-  //     floatingMenu.style.transform = "translateX(0%)";
-  //   } else {
-  //     floatingMenu.style.transform = "translateX(120%)";
-  //   }
-  // }
-
-  // document.getElementById('toggleMenu').addEventListener('click', function() {
-  //   var sideMenu = document.getElementById('sideMenu');
-  //   if (sideMenu.style.transform === 'translateX(0%)') {
-  //     sideMenu.style.transform = 'translateX(100%)'; 
-  //   } else {
-  //     sideMenu.style.transform = 'translateX(0%)';
-  //   }
-  // });
-
-  // document.getElementById('closeMenu').addEventListener('click', function() {
-  //   var sideMenu = document.getElementById('sideMenu');
-  //   sideMenu.style.transform = 'translateX(100%)'; 
-  // });
+  document.getElementById('closeMenu').addEventListener('click', function() {
+    var sideMenu = document.getElementById('sideMenu');
+    sideMenu.style.transform = 'translateX(100%)'; 
+  });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -2327,27 +2138,58 @@
   });
 
   document.addEventListener("DOMContentLoaded", function() {
-        const tabs = document.querySelectorAll('.showcase-tab');
-        const contents = document.querySelectorAll('.showcase-content');
+    const tabs = document.querySelectorAll('.showcase-tab');
+    const contents = document.querySelectorAll('.showcase-content');
+    const menuItems = document.querySelectorAll('#menu a');
+    const sideMenuItems = document.querySelectorAll('#sideMenu a');
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                tabs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-
-                const tabData = this.getAttribute('tab-data');
-                contents.forEach(content => {
-                    if (content.id === tabData) {
-                        content.style.display = 'block';
-                    } else {
-                        content.style.display = 'none';
-                    }
-                });
-            });
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            activateTab(this.getAttribute('tab-data'));
         });
+    });
+
+    menuItems.forEach(menuItem => {
+      menuItem.addEventListener('click', function(e) {
+          e.preventDefault();
+          const sectionId = this.getAttribute('href');
+          activateTab(sectionId.substring(1));
+          document.getElementById(sectionId.substring(1)).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    sideMenuItems.forEach(sideMenuItem => {
+      sideMenuItem.addEventListener('click', function(e) {
+          e.preventDefault();
+          const sectionId = this.getAttribute('href');
+          activateTab(sectionId.substring(1));
+          document.getElementById(sectionId.substring(1)).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    function activateTab(tabId) {
+        tabs.forEach(tab => {
+            if (tab.getAttribute('tab-data') === tabId) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        contents.forEach(content => {
+            if (content.id === tabId) {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        });
+    }
+    const activeTab = document.querySelector('.showcase-tab.active');
+    if (activeTab) {
+        activateTab(activeTab.getAttribute('tab-data'));
+    }
   });
+
   document.addEventListener("DOMContentLoaded", function() {
     function isValidEmail(email) {
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
